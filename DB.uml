@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Body</OriginalElement>
+  <nodes>
+    <node x="163.54730053222113" y="-115.16381364947418">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Body</node>
+    <node x="52.5" y="205.44280895430853">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Wine</node>
+    <node x="402.42885375494075" y="267.39328063241106">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Cheese</node>
+    <node x="174.54730053222113" y="628.7102398732334">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Pairing</node>
+    <node x="-29.04611492307987" y="-115.16381364947418">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.WineIntensity</node>
+    <node x="335.1407159875221" y="-115.16381364947418">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.WineType</node>
+    <node x="-203.63953037838087" y="-115.16381364947418">1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.WineColor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Wine" target="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.WineType" relationship="REFERENCES">
+      <point x="-46.125" y="-127.5" />
+      <point x="408.1407159875221" y="205.44280895430853" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Wine" target="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Body" relationship="REFERENCES">
+      <point x="41.0" y="-127.5" />
+      <point x="155.0" y="104.0" />
+      <point x="238.04730053222113" y="104.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Pairing" target="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Wine" relationship="REFERENCES">
+      <point x="-31.75" y="-39.0" />
+      <point x="206.29730053222113" y="531.4418093983312" />
+      <point x="114.0" y="531.4418093983312" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Wine" target="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.WineIntensity" relationship="REFERENCES">
+      <point x="0.0" y="-127.5" />
+      <point x="114.0" y="88.9126034958602" />
+      <point x="55.95388507692013" y="88.9126034958602" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Wine" target="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.WineColor" relationship="REFERENCES">
+      <point x="-41.0" y="-127.5" />
+      <point x="73.0" y="180.85094345036828" />
+      <point x="-127.63953037838087" y="180.85094345036828" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Pairing" target="1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Cheese" relationship="REFERENCES">
+      <point x="31.75" y="-39.0" />
+      <point x="269.79730053222113" y="409.0" />
+      <point x="449.92885375494075" y="409.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.55" showDependencies="false" x="529.6136752725301" y="289.4332454984627" />
+  <SelectedNodes>
+    <node>1fdfed4a-3759-491c-88b2-8b57048b172d.TABLE:main.Pairing</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
