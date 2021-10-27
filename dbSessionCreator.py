@@ -1,14 +1,3 @@
-"""import
-
-    from dbSessionCreator import Base
-    from dbSessionCreator import engine
-    from models import *
-
-    Base.metadata.drop_all(bind=engine)
-    Base.metadata.create_all(bind=engine)
-
-"""
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 import pyodbc
@@ -20,13 +9,5 @@ engine = create_engine(
     SQL_URL
 )
 
-
-# SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
 Base = declarative_base()
-with engine.connect() as connection:
-    print("sunt connectat")
-
-
-# db = SessionLocal()
 
