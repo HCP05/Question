@@ -1,6 +1,6 @@
 import enum
 
-from sqlalchemy import Column, Integer, Text, Enum, ForeignKey, Float, Table
+from sqlalchemy import Column, Integer, Text, Enum, ForeignKey, Float, Table,VARCHAR
 
 from dbSessionCreator import Base
 
@@ -50,7 +50,7 @@ class WineType(Base):
     __tablename__ = 'WineType'
     __table_args__ = {"schema": "testschema"}
     id_wine_type = Column(Integer, primary_key=True)
-    type_of_wine = Column(Text)
+    type_of_wine = Column(VARCHAR(20))
 
 
 class Wine(Base):
@@ -72,7 +72,7 @@ class Cheese(Base):
     __tablename__ = 'Cheese'
     __table_args__ = {"schema": "testschema"}
     id_c = Column(Integer, primary_key=True)
-    cheese=Column(Text)
+    cheese=Column(VARCHAR(20))
 
 
 Pairing = Table('Pairing',Base.metadata,
@@ -81,3 +81,10 @@ Pairing = Table('Pairing',Base.metadata,
                 schema='testschema'
                 )
 
+class User(Base):
+    __tablename__='User'
+    __table_args__ = {"schema": "testschema"}
+    id_user=Column(Integer,primary_key=True)
+    username=Column(VARCHAR(20))
+    password=Column(VARCHAR(20))#we must implement hashing
+    phothoPath=Column(VARCHAR(30))
