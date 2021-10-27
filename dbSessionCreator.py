@@ -11,29 +11,21 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from sqlalchemy.engine import URL
-# SQL_URL = 'mssql+pyodbc://user:password@server/database'
+import pyodbc
+
+SQL_URL = 'mssql+pyodbc://richard_koch:0ptZeciD0u@z3c1@python-internship-server.database.windows.net/python_internship_sample?driver=SQL Server'
 # SQL_URL = 'mssql+pyodbc://@HCP05\SQLEXPRESS/test'
 
-connection_url = URL.create(
-    "mssql+pyodbc",
-    host="HCP05\SQLEXPRESS",
-    database="test",
-    query={
-        "driver": "OLEDBC Driver 19 for SQL Server",
-        "authentication": "ActiveDirectoryIntegrated",
-    },
-)
 engine = create_engine(
-    connection_url
+    SQL_URL
 )
+
 
 # SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
-with engine.connect():
-    select('table_name')
-
+with engine.connect() as connection:
+    print("sunt connectat")
 
 
 # db = SessionLocal()
